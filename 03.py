@@ -1,13 +1,16 @@
 height=eval(input('Desired height:'))
 width=eval(input('Desired width:'))
-j=width+1
 
-for i in range(10):
+i=0
+for k in range(height):
     
     for k in range(width):
-        print(k,end=" ")
-        print("\n")
-    print(i,end=" ")
+        print(i,end=" ")
+        if i==9:
+            i=-1
+
+        i+=1
+    print()
     
   
   #  print(i,end=" ")
