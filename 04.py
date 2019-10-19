@@ -20,16 +20,23 @@ while player == False:
     
     
     for i in range(5):
-        player=input("Rock,Paper,Scissors?")
+
+        player=""
+        while player == "":
+              player=input("Rock,Paper,Scissors?")
+              if player == "":
+                  print("Invalid choice")
+
+        
         Computer=playOptions[randint(0,2)]
         if Computer == player:
             tie=tie+1
-        elif player=="Rock":
-            if Computer== "Paper":
+        elif player=="Rock" :
+            if Computer == "Paper":
                 ComputerScores=ComputerScores+1
             else:
                 playerScores+=1
-        elif player == "paper":
+        elif player == "Paper":
             if Computer == "Scissors":
                 ComputerScores=ComputerScores+1
             else:
@@ -39,8 +46,8 @@ while player == False:
                 ComputerScores=ComputerScores+1
             else:
                 playerScores=playerScores +1
-        elif player == "":
-            print("Invalid choice")
+        
+          
 
     player = False
 
@@ -55,8 +62,8 @@ while player == False:
         print( " You win by ",playerScores)
     elif playerScores == ComputerScores:
         print( "A tie")
-            
-    
+        print(ComputerScores)
+        print(playerScores)
 
 
  
